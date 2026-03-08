@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>AI Grievance Analyzer Test</title>
+</head>
+
+<body>
+
+<h2>Complaint Analyzer</h2>
+
+<input id="complaint" placeholder="Enter complaint here">
+<button onclick="analyze()">Analyze</button>
+
+<pre id="result">Result will appear here</pre>
+
+<script>
+
+async function analyze() {
+
+  const text = document.getElementById("complaint").value;
+
+  if (!text) {
+    document.getElementById("result").innerText = "Please enter a complaint";
+    return;
+  }
+
+  try {
+
+    const response = await fetch("http://localhost:5000/analyze", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ text: text })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("result").innerText =
+      "Category: " + data.category + "\n" +
+      "Sentiment: " + data.sentiment + "\n" +
+      "Priority: " + data.priority;
+
+  } catch (error) {
+
+    console.log(error);
+    document.getElementById("result").innerText = "Error connecting to backend";
+
+  }
+
+}
+
+</script>
+
+</body>
+
+</html>

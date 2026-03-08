@@ -1,0 +1,121 @@
+text,category
+wifi signal very weak,Network
+wifi not working in hostel,Network
+campus internet not accessible,Network
+wifi not working in hostel,Network
+unable to connect to campus wifi,Network
+internet stops during night,Network
+wifi disconnects frequently,Network
+internet stops during night,Network
+internet stops during night,Network
+campus internet not accessible,Network
+wifi signal very weak,Network
+wifi signal very weak,Network
+internet speed very slow,Network
+campus internet not accessible,Network
+wifi disconnects frequently,Network
+internet speed very slow,Network
+campus internet not accessible,Network
+wifi not working in hostel,Network
+unable to connect to campus wifi,Network
+internet speed very slow,Network
+switchboard damaged in room,Electrical
+lights not working in corridor,Electrical
+lights not working in corridor,Electrical
+lights not working in corridor,Electrical
+electric socket not working,Electrical
+power outage in hostel block,Electrical
+electric socket not working,Electrical
+electricity problem in hostel,Electrical
+power outage in hostel block,Electrical
+room fan making noise,Electrical
+tube light flickering,Electrical
+room fan making noise,Electrical
+tube light flickering,Electrical
+electricity problem in hostel,Electrical
+electricity problem in hostel,Electrical
+room fan making noise,Electrical
+electricity problem in hostel,Electrical
+power outage in hostel block,Electrical
+electric socket not working,Electrical
+power outage in hostel block,Electrical
+food tastes bad,Mess
+mess food quality very bad,Mess
+mess hygiene is poor,Mess
+food not cooked properly,Mess
+mess menu repetitive,Mess
+not enough food in mess,Mess
+not enough food in mess,Mess
+not enough food in mess,Mess
+not enough food in mess,Mess
+mess food quality very bad,Mess
+mess menu repetitive,Mess
+mess plates are dirty,Mess
+not enough food in mess,Mess
+mess menu repetitive,Mess
+mess plates are dirty,Mess
+mess plates are dirty,Mess
+food not cooked properly,Mess
+mess hygiene is poor,Mess
+food not cooked properly,Mess
+food served cold in mess,Mess
+hostel gate lock broken,Infrastructure
+library closes too early,Infrastructure
+library chairs broken,Infrastructure
+water leakage in hostel,Infrastructure
+building maintenance required,Infrastructure
+washroom not clean,Infrastructure
+water leakage in hostel,Infrastructure
+hostel gate lock broken,Infrastructure
+building maintenance required,Infrastructure
+classroom benches damaged,Infrastructure
+library chairs broken,Infrastructure
+washroom not clean,Infrastructure
+library chairs broken,Infrastructure
+drinking water problem,Infrastructure
+hostel gate lock broken,Infrastructure
+classroom benches damaged,Infrastructure
+water leakage in hostel,Infrastructure
+building maintenance required,Infrastructure
+library chairs broken,Infrastructure
+water leakage in hostel,Infrastructure
+class schedule not clear,Academic
+professor behavior rude,Academic
+exam schedule confusing,Academic
+too many assignments given,Academic
+professor behavior rude,Academic
+teacher absent frequently,Academic
+teacher absent frequently,Academic
+too many assignments given,Academic
+lecture starts late,Academic
+lecture starts late,Academic
+exam schedule confusing,Academic
+too many assignments given,Academic
+lecture starts late,Academic
+class schedule not clear,Academic
+lecture starts late,Academic
+class schedule not clear,Academic
+teacher not explaining properly,Academic
+class schedule not clear,Academic
+professor behavior rude,Academic
+exam schedule confusing,Academic
+leave request not approved,Administration
+leave request not approved,Administration
+id card issue unresolved,Administration
+documents verification delayed,Administration
+documents verification delayed,Administration
+id card issue unresolved,Administration
+documents verification delayed,Administration
+scholarship not processed,Administration
+administration staff rude,Administration
+scholarship not processed,Administration
+administration staff rude,Administration
+administration staff rude,Administration
+leave request not approved,Administration
+delay in hostel allotment,Administration
+complaint office not responding,Administration
+id card issue unresolved,Administration
+leave request not approved,Administration
+leave request not approved,Administration
+administration staff rude,Administration
+fee receipt not updated,Administration
