@@ -19,9 +19,10 @@ app.post("/analyze", async (req, res) => {
 
   if (!complaint) {
     return res.json({
-      category: "None",
-      sentiment: "None",
-      priority: "None"
+      total_issues: 0,
+      overall_priority: "None",
+      departments_to_notify: [],
+      issues: []
     });
   }
 
@@ -38,9 +39,10 @@ app.post("/analyze", async (req, res) => {
     console.error("AI ERROR:", error);
 
     res.status(500).json({
-      category: "Error",
-      sentiment: "Error",
-      priority: "Error"
+      total_issues: 0,
+      overall_priority: "Error",
+      departments_to_notify: [],
+      issues: []
     });
 
   }
