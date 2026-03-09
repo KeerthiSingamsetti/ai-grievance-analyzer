@@ -1,42 +1,57 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app  { min-height: 100vh; display: flex; flex-direction: column; }
+.main { max-width: 1000px; margin: 0 auto; padding: 48px 24px; flex: 1; width: 100%; }
+
+/* ERROR */
+.error-box {
+  border        : 2px solid var(--red);
+  background    : var(--red-bg);
+  border-radius : 2px;
+  padding       : 14px 20px;
+  font-family   : var(--mono);
+  font-size     : 12px;
+  color         : var(--red);
+  margin-bottom : 24px;
+  display       : flex;
+  align-items   : center;
+  gap           : 10px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* ANALYZING */
+.analyzing       { text-align: center; padding: 60px 20px; }
+.analyzing-title { font-family: var(--serif); font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+.analyzing-sub   { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 2px; }
+
+.dots { display: flex; justify-content: center; gap: 8px; margin: 18px 0; }
+.dot  {
+  width        : 10px;
+  height       : 10px;
+  border-radius: 50%;
+  background   : var(--ink);
+  animation    : bounce 1.2s infinite ease-in-out;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.dot:nth-child(2) { animation-delay: 0.2s; background: var(--red);   }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* DIVIDER */
+.divider       { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.divider-line  { flex: 1; height: 2px; background: var(--ink); }
+.divider-text  { font-family: var(--serif); font-size: 22px; font-weight: 700; white-space: nowrap; }
+.divider-count {
+  font-family   : var(--mono);
+  font-size     : 11px;
+  color         : var(--muted);
+  background    : var(--cream);
+  border        : 1px solid var(--border);
+  padding       : 2px 10px;
+  border-radius : 2px;
+  white-space   : nowrap;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* NO ISSUES */
+.no-issues       { border: 2px solid var(--green); background: var(--green-bg); border-radius: 2px; padding: 32px; text-align: center; }
+.no-issues-title { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+.no-issues-sub   { font-family: var(--mono); font-size: 11px; color: var(--green); opacity: 0.7; letter-spacing: 1px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media (max-width: 720px) {
+  .main { padding: 24px 16px; }
 }

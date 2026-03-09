@@ -43,25 +43,22 @@ sentiment_model = pipeline(
 
 # ---------------------------
 # STEP 5: Text cleaner
-# cleans up messy split sentences
-# professionally ✅
 # ---------------------------
 def clean_sentence(sentence):
-    # remove extra dots and spaces
     sentence = re.sub(r'\s+\.', '', sentence)
     sentence = re.sub(r'\.+', '', sentence)
     sentence = re.sub(r'\s+', ' ', sentence)
     sentence = sentence.strip()
-
-    # capitalize first letter
     sentence = sentence[0].upper() + sentence[1:] if sentence else sentence
-
     return sentence
 
 # ---------------------------
 # STEP 6: Smart clause splitter
 # ---------------------------
 def split_into_clauses(text):
+
+    # fix missing space after dot e.g. "mess.my" → "mess. my"
+    text = re.sub(r'\.([A-Za-z])', r'. \1', text)
 
     text = re.sub(
         r'\b(but|however|also|although|though|yet|whereas|moreover|furthermore)\b',
@@ -96,22 +93,27 @@ departments  = []
 
 for clause in clauses:
 
+    # skip positive sentences (greetings, thanks etc.)
     sentiment = sentiment_model(clause)[0]["label"]
-
     if sentiment == "POSITIVE":
         continue
 
+    # predict category using Naive Bayes
     category = model.predict(
         vectorizer.transform([clause])
     )[0]
 
+    # skip filler sentences like "please resolve this", "thank you" etc.
+    if category == 'General':
+        continue
+
     priority = "High" if sentiment == "NEGATIVE" else "Low"
 
-    # clean the sentence instead of issue label ✅
+    # clean the sentence
     clean = clean_sentence(clause)
 
     issues_found.append({
-        "issue"    : clean,       # clean sentence AS the issue ✅
+        "issue"    : clean,
         "category" : category,
         "sentiment": sentiment,
         "priority" : priority
