@@ -92,10 +92,8 @@ JSON result → Node.js → MongoDB + Email
 | Layer | Technology |
 |---|---|
 | Frontend | React 18 + TypeScript + Vite |
-| Styling | Plain CSS — custom design system |
 | Charts | Recharts |
 | Backend | Node.js + Express |
-| AI Bridge | Python child process via `spawn` |
 | Category ML | scikit-learn — Multinomial Naive Bayes + TF-IDF |
 | Priority ML | scikit-learn — Logistic Regression + TF-IDF |
 | Sentiment | HuggingFace Transformers — DistilBERT |
@@ -103,7 +101,6 @@ JSON result → Node.js → MongoDB + Email
 | Database | MongoDB Atlas + Mongoose ODM |
 | Auth | JWT (8h expiry) |
 | Email | Nodemailer + Gmail SMTP |
-| Fonts | Playfair Display · DM Sans · DM Mono |
 
 ---
 
@@ -134,79 +131,6 @@ ai-grievance-analyzer/
     ├── middleware/auth.js         # JWT middleware
     └── utils/emailService.js      # Nodemailer email service
 ```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js v18+
-- Python 3.9+
-- MongoDB Atlas account (free tier works)
-- Gmail account (for email notifications)
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/yourusername/ai-grievance-analyzer.git
-cd ai-grievance-analyzer
-```
-
-### 2. Install Python dependencies
-```bash
-cd server
-pip install scikit-learn nltk transformers torch pandas numpy
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet')"
-```
-
-### 3. Install Node dependencies
-```bash
-# Server
-cd server && npm install
-
-# Client
-cd ../client && npm install
-```
-
-### 4. Configure environment variables
-Create `server/.env`:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_atlas_uri
-JWT_SECRET=your_jwt_secret
-ADMIN_PASSWORD=your_admin_password
-
-# Email (optional)
-EMAIL_USER=yourgmail@gmail.com
-EMAIL_PASS=your_gmail_app_password
-
-# Department emails
-EMAIL_NETWORK=network@college.edu
-EMAIL_ELECTRICAL=electrical@college.edu
-EMAIL_MESS=mess@college.edu
-EMAIL_INFRASTRUCTURE=infra@college.edu
-EMAIL_ACADEMIC=academic@college.edu
-EMAIL_ADMINISTRATION=admin@college.edu
-```
-
-### 5. Run the project
-```bash
-# Terminal 1 — Backend
-cd server && node index.js
-
-# Terminal 2 — Frontend
-cd client && npm run dev
-```
-
-### 6. (Optional) Seed demo data
-```bash
-cd server
-node seedComplaints.js          # insert 10 demo complaints
-node seedComplaints.js --clear  # clear existing + insert fresh
-```
-
-Open [http://localhost:5173](http://localhost:5173)
-
----
 
 ## 🔌 API Reference
 
